@@ -1,0 +1,51 @@
+{
+  "name": "sameerTrack",
+  "version": "0.0.1",
+  "main": "dist/sameerTrack.cjs.js",
+  "module": "dist/sameerTrack.esm.js",
+  "unpkg": "dist/sameerTrack.min.js",
+  "keywords": [
+    "rollup",
+    "babel",
+    "starter"
+  ],
+  "author": "sameer",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "npm run clean && cross-env NODE_ENV=development rollup -w -c build/rollup.config.dev.js",
+    "build": "npm run clean && cross-env NODE_ENV=production rollup -c build/rollup.config.prod.js",
+    "test": "jest",
+    "serve": "serve -p 8080"
+  },
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "dependencies": {
+    "core-js": "^3.18.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.4.4",
+    "cross-env": "^5.1.3",
+    "lint-staged": "^10.5.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-filesize": "^1.5.0",
+    "rollup-plugin-serve": "^0.4.2",
+    "rollup-plugin-uglify": "^2.0.1",
+    "@rollup/plugin-alias": "^3.1.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-replace": "^3.0.0",
+    "uglify-es": "^3.3.4"
+  }
+}
